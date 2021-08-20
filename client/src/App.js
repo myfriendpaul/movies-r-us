@@ -1,5 +1,13 @@
+import Nav from "./components/Nav";
+import Form from "./components/Form";
+
 function App() {
-  return <h1>Hello Andrew</h1>;
+  return (
+    <>
+      <Nav />
+      <Form />
+    </>
+  );
 }
 
 export default App;
