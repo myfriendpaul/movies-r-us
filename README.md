@@ -55,22 +55,19 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 ```
 
 #### MVP
+Utilizing an API, data will populate on the page allowing for traversing through the results. Once the movie has been selected, the date from that API will be passed into the Airtable API to update the list using a post request. If the movie doesn't exist or the user would like to add their own movie to the watch list, they can access the Create-A-Movie page where a form to add their own movie with an image will send a post request to the Airtable API. 
+On the Watch List page, the user will be able to see all movies that have been added to their list and has the option to remove them utilizing a delete request to the Airtable API. 
+Using a simple toggle switch will let the user keep track of what they are currently watching.
 
-- Find and use external api
-- Add external api data to airtable api
-- Search through database
-- Create a movie if it doesn't exist
-- Allow user to add and remove selected movie to watch list
 
 #### PostMVP
 
-- Use third api to send selected movies to my in home server and add to "To be added" list
-- Add TV Shows
-- Allow user to create multiple lists
+Using a third API such as CouchPotato, create a front end to process incoming requests for users of my Plex server. This will mitigate the necessity of phone calls and text messages to request certain movies being added to the library. 
+I would also like to like to incorporate TV shows at some point and integrate the Sonarr API in conjuction with Couchpotato to fully automate the library updates. Sonarr allows for automatic searches and downloads of media depending on what the server has queued up for downloads. Eventually, I would like to not have to manage this directly and have the server update on its own via user requests.
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
+
 
 | Day       |                    Deliverable                     |        Status         |
 | --------- | :------------------------------------------------: | :-------------------: |
@@ -95,12 +92,12 @@ This schedule will be used to keep track of your progress throughout the week an
 
 | Total | H | 44hrs | hrs | hrs |
 
-## SWOT Analysis
+### SWOT Analysis
 
-### Strengths:
+##### Strengths: Confident in how my component hierachy will keep me on track and on schedule. I feel as it is detailed enough to make sure I tick all my boxes with little to no setbacks. 
 
-### Weaknesses:
+##### Weaknesses: I have yet to use grid with flexbox together which I know I will need in order to get the layout and design I am looking for. Thankfully, I have found resources that will aid in my CSS process next week. 
 
-### Opportunities:
+##### Opportunities: Utilizing a second API as part of my MVP is something I wanted to challenge myself with. I believe that having this incorporated into this project will really show what I have learned thus far. 
 
-### Threats:
+##### Threats: Passing the search results into watch list will be a challenge. The thought process so far is to consider it inside its own container and using event listeners to get the data passed into a separate component. 
