@@ -72,15 +72,15 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
-| Day       | Deliverable                                        | Status                |
-| --------- | -------------------------------------------------- | --------------------- | ---------- |
-| Aug 19-20 | Readme / Wireframes / Priority Matrix / Timeframes | Incomplete            |
-| Aug 20    | Project Approval                                   | Incomplete            |
-| Aug 21-22 | Functionality for search                           | Incomplete            |
-| Aug 23    | Components completed                               | InitialClickableModel | Incomplete |
-| Aug 24    | CSS                                                | Incomplete            |
-| Aug 25    | MVP                                                | Incomplete            |
-| Aug 27    | Presentations                                      | Incomplete            |
+| Day       |                    Deliverable                     |        Status         |
+| --------- | :------------------------------------------------: | :-------------------: |
+| Aug 19-20 | Readme / Wireframes / Priority Matrix / Timeframes |      Incomplete       |
+| Aug 20    |                  Project Approval                  |      Incomplete       |
+| Aug 21-22 |              Functionality for search              |      Incomplete       |
+| Aug 23    |                Components completed                | InitialClickableModel |
+| Aug 24    |                        CSS                         |      Incomplete       |
+| Aug 25    |                        MVP                         |      Incomplete       |
+| Aug 27    |                   Presentations                    |      Incomplete       |
 
 ## Timeframes
 
