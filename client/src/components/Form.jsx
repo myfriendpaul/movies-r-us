@@ -17,11 +17,11 @@ function Form() {
           type="text"
           onChange={(e) => setMovies(e.target.value)}
         />
-        <Link to={`/search/result`}>
+        <Link to={`/search/${movies}`}>
           <button type="submit">Search</button>
         </Link>
-        <Route path={`/search/result`}>
-          <Search />
+        <Route path={`/search/${movies}`}>
+          <Search movies={movies} />
         </Route>
       </form>
     </>
