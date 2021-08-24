@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { airtableBaseURL, config } from "../services";
+import WatchListCards from "./WatchListCards";
 
 function WatchList() {
   const [listItem, setListItem] = useState([]);
@@ -18,12 +19,7 @@ function WatchList() {
     <div>
       {listItem.map((list, index) => (
         <React.Fragment key={index}>
-          <h1>{list.fields.title}</h1>
-          <img
-            className="movie-posters"
-            alt="poster"
-            src={list.fields.poster_path}
-          />
+          <WatchListCards list={list} />
         </React.Fragment>
       ))}
     </div>

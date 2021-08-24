@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MovieCards from "./MovieCards";
 
 function Search(props) {
   const [results, setResults] = useState([]);
@@ -16,18 +17,12 @@ function Search(props) {
   }, []);
 
   return (
-    <div className="movie">
-      <h2>This is the search result component</h2>
-
+    <div className="search-container">
       {results.length > 0 && (
         <ul className="result">
-          {results.map((movie, index) => (
-            <React.Fragment key={index}>
-              <li>{movie.title}</li>
-              <img
-                alt="poster"
-                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-              />
+          {results.map((movie) => (
+            <React.Fragment key={movie.id}>
+              <MovieCards movie={movie} />
             </React.Fragment>
           ))}
         </ul>
