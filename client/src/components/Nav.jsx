@@ -6,8 +6,9 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li>
+        <li className="nav-links">
           <Link to="/">Home</Link>
+          <Route path="/" exact></Route>
         </li>
         <li>
           <Link to="/watchlist">Watch List</Link>

@@ -2,3 +2,7 @@
   width: 200px;
   height: 450px;
 }
+
+.nav-links {
+  text-decoration: none;
+}
