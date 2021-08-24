@@ -4,21 +4,26 @@ function WatchListCards(props) {
   return (
     <div className="card-container">
       <div className="poster-container">
-        {props.list.fields.poster ? (
+        <br />
+        <br />
+        <br />
+        {props.item.fields.poster_path.includes("https") ? (
           <img
             className="movie-posters"
             alt="poster"
-            src={props.list.fields.poster}
+            src={props.item.fields.poster_path}
           />
         ) : (
-          <div className="temp-poster"></div>
+          <img
+            src={`https://image.tmdb.org/t/p/w200${props.item.fields.poster_path}`}
+          />
         )}
       </div>
       <div className="title-container">
-        <h2 className="title">{props.list.fields.title}</h2>
+        <h2 className="title">{props.item.fields.title}</h2>
       </div>
       <div>
-        <Delete />
+        <Delete movie={props.item} setToggleFetch={props.setToggleFetch} />
       </div>
     </div>
   );

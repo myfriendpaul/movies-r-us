@@ -31,7 +31,7 @@ function CreateaMovie() {
           id="createamovie-img"
           placeholder="Add your poster URL"
           value={poster}
-          type="url"
+          type="text"
           onChange={(e) => setPoster(e.target.value)}
         />
         <br />

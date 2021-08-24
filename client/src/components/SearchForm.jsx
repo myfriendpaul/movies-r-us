@@ -1,19 +1,10 @@
-import MovieCards from "./MovieCards";
 import React from "react";
 
 function SearchForm(props) {
   const { results, movies, setMovies, handleSubmit } = props;
   return (
     <div>
-      <div className="search-container">
-        <ul className="result">
-          {results.map((movie, index) => (
-            <React.Fragment key={index}>
-              <MovieCards movie={movie} />
-            </React.Fragment>
-          ))}
-        </ul>
-      </div>
+      <div className="search-container"></div>
       <div>
         <form id="form-container" onSubmit={handleSubmit}>
           <input

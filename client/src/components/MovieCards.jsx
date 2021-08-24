@@ -1,22 +1,29 @@
 import axios from "axios";
 import { airtableBaseURL, config } from "../services";
-import { useParams } from "react-router-dom";
 
 function MovieCards(props) {
-  const { title, poster_path: poster } = props.movie;
-  const params = useParams();
+  const title = props.movie.title;
+  const poster = `https://image.tmdb.org/t/p/w200${props.movie.poster_path}`;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const addMovie = {
-      title,
-      poster,
-    };
-    await axios.post(airtableBaseURL, { fields: addMovie }, config);
+    alert("Movie was added!");
+    try {
+      const addMovie = {
+        title,
+        poster,
+      };
+      await axios.post(airtableBaseURL, { fields: addMovie }, config);
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div className="card-container">
       <div className="poster-container">
+        <div className="title-container">
+          <h2 className="title">{title}</h2>
+        </div>
         {props.movie.poster_path ? (
           <img
             alt="poster"
@@ -25,9 +32,6 @@ function MovieCards(props) {
         ) : (
           <div className="temp-poster"></div>
         )}
-      </div>
-      <div className="title-container">
-        <h2 className="title">{props.movie.title}</h2>
       </div>
       <div className="add-button">
         <form onSubmit={handleSubmit}>

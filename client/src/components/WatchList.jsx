@@ -5,7 +5,7 @@ import WatchListCards from "./WatchListCards";
 
 function WatchList() {
   const [listItem, setListItem] = useState([]);
-
+  const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
     const getList = async () => {
       const resp = await axios.get(airtableBaseURL, config);
@@ -13,13 +13,13 @@ function WatchList() {
       setListItem(resp.data.records);
     };
     getList();
-  }, []);
+  }, [toggleFetch]);
 
   return (
     <div>
-      {listItem.map((list, index) => (
+      {listItem.map((item, index) => (
         <React.Fragment key={index}>
-          <WatchListCards list={list} />
+          <WatchListCards item={item} setToggleFetch={setToggleFetch} />
         </React.Fragment>
       ))}
     </div>

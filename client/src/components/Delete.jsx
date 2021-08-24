@@ -3,7 +3,8 @@ import axios from "axios";
 
 function Delete(props) {
   const handleDelete = async () => {
-    await axios.delete(airtableBaseURL / `${props.movie}`, config);
+    await axios.delete(`${airtableBaseURL}/${props.movie.id}`, config);
+    props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
   };
   return (
     <div>

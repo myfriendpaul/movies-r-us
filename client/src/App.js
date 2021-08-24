@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Route, useHistory } from "react-router-dom";
 import axios from "axios";
 import SearchForm from "./components/SearchForm";
 import Nav from "./components/Nav";
 import "./App.css";
-import CreateaMovie from "./components/CreateaMovie";
 import MovieCards from "./components/MovieCards";
 
 function App() {
@@ -15,6 +14,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     const resp = await axios(
       `https://api.themoviedb.org/3/search/movie?api_key=bce9e682949cac77cfcbf7c7654e8dd0&&language=en-US&page=1&include_adult=false&query=${movies}`
     );
@@ -28,21 +28,27 @@ function App() {
       <nav>
         <Nav />
       </nav>
+
       <Route path="/" exact>
         <SearchForm
           movies={movies}
           setMovies={setMovies}
           results={results}
-          // setToggleFetch={setToggleFetch}
           handleSubmit={handleSubmit}
         />
       </Route>
+
       <Route path="/search/:search" exact>
-        {results.map((movie) => {
-          return <MovieCards movie={movie} />;
+        {results.map((movie, index) => {
+          return (
+            <MovieCards
+              movie={movie}
+              key={index}
+              setToggleFetch={setToggleFetch}
+            />
+          );
         })}
       </Route>
-      {/* <CreateaMovie /> */}
     </div>
   );
 }
