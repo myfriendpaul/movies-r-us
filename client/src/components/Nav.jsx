@@ -1,26 +1,24 @@
-import { Link, Route } from "react-router-dom";
-import WatchList from "./WatchList";
-import CreateaMovie from "./CreateaMovie";
+import { Link } from "react-router-dom";
+import "./NavCSS.css";
 
 function Nav() {
   return (
     <nav>
-      <ul>
-        <li className="nav-links">
-          <Link to="/">Home</Link>
-          <Route path="/" exact></Route>
+      <ul className="text-temp">
+        <li>
+          <Link to="/" className="nav-links">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/watchlist">Watch List</Link>
-          <Route path="/watchlist">
-            <WatchList />
-          </Route>
+          <Link to="/watchlist" className="nav-links">
+            Watch List
+          </Link>
         </li>
         <li>
-          <Link to="/createamovie">Create-A-Movie</Link>
-          <Route path="/createamovie">
-            <CreateaMovie />
-          </Route>
+          <Link to="/createamovie" className="nav-links">
+            Create-A-Movie
+          </Link>
         </li>
       </ul>
     </nav>
