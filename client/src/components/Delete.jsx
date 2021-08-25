@@ -8,7 +8,7 @@ function Delete(props) {
   };
   return (
     <div>
-      <button type="submit" onClick={handleDelete}>
+      <button className="button" type="submit" onClick={handleDelete}>
         Remove
       </button>
     </div>

@@ -5,25 +5,25 @@ import WatchList from "./WatchList";
 
 function Nav() {
   return (
-    <nav>
+    <nav className="nav-container">
       <ul className="text-temp">
-        <li>
+        <li className="nav-links-container">
           <Link to="/" className="nav-links">
             Home
           </Link>
-        </li>
-        <li>
           <Link to="/watchlist" className="nav-links">
             Watch List
           </Link>
+          <Link to="/createamovie" className="nav-links">
+            Create-A-Movie
+          </Link>
+        </li>
+        <li>
           <Route path="/watchlist">
             <WatchList />
           </Route>
         </li>
         <li>
-          <Link to="/createamovie" className="nav-links">
-            Create-A-Movie
-          </Link>
           <Route path="/createamovie">
             <CreateaMovie />
           </Route>
