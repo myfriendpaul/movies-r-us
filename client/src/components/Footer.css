@@ -1,10 +1,12 @@
 #footer-container {
   display: flex;
-  justify-content: center;
   position: absolute;
+  justify-content: center;
+  /* padding: 1rem; */
   bottom: 0;
   width: 100%;
-  background-color: grey;
+
+  /* z-index: -1; */
 }
 
 .footer-links {

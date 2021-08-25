@@ -1,4 +1,5 @@
 import Delete from "./Delete";
+import ToggleSwitch from "./Toggle";
 
 function WatchListCards(props) {
   return (
@@ -25,6 +26,7 @@ function WatchListCards(props) {
         <h2 className="title">{props.item.fields.title}</h2>
       </div>
       <div>
+        <ToggleSwitch movie={props.item} />
         <Delete movie={props.item} setToggleFetch={props.setToggleFetch} />
       </div>
     </div>

@@ -5,31 +5,34 @@ import WatchList from "./WatchList";
 
 function Nav() {
   return (
-    <nav className="nav-container">
-      <ul className="text-temp">
-        <li className="nav-links-container">
-          <Link to="/" className="nav-links">
-            Home
-          </Link>
-          <Link to="/watchlist" className="nav-links">
-            Watch List
-          </Link>
-          <Link to="/createamovie" className="nav-links">
-            Create-A-Movie
-          </Link>
-        </li>
-        <li>
-          <Route path="/watchlist">
-            <WatchList />
-          </Route>
-        </li>
-        <li>
-          <Route path="/createamovie">
-            <CreateaMovie />
-          </Route>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <header className="nav-container">
+        <div className="logo-container">
+          <div className="logo-title-container">
+            <p className="logo-title">SEENT IT</p>
+          </div>
+        </div>
+        <ul className="text-temp">
+          <li className="nav-links-container">
+            <Link to="/" className="nav-links">
+              Home
+            </Link>
+            <Link to="/watchlist" className="nav-links">
+              Watch List
+            </Link>
+            <Link to="/createamovie" className="nav-links">
+              Create-A-Movie
+            </Link>
+          </li>
+        </ul>
+      </header>
+      <Route path="/watchlist">
+        <WatchList />
+      </Route>
+      <Route path="/createamovie">
+        <CreateaMovie />
+      </Route>
+    </>
   );
 }
 

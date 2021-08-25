@@ -1,8 +1,12 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  background-color: #2a2f3d;
+}
+
 .movie-posters {
   width: 200px;
   height: 450px;
-}
-
-.nav-links {
-  text-decoration: none;
 }

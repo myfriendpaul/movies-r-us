@@ -1,5 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a2f3d;
+  padding: 1rem;
+  /* position: sticky; */
+  top: 0;
+  min-height: 100px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.logo-img {
+  min-height: 40px;
+  width: 30px;
+}
+.logo-title-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 2rem;
+}
+
+.logo-title {
+  font-family: "Bungee", cursive;
+  color: #ffca00;
+  justify-content: center;
+}
+
+.text-temp {
+  /* padding: 0 25px 0 0; */
+}
 .nav-links {
   text-decoration: none;
+  margin: 10px;
 }
 .text-temp {
   list-style-type: none;

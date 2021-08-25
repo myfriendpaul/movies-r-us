@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import "./App.css";
 import MovieCards from "./components/MovieCards";
 import Footer from "./components/Footer";
+import { tmdbBaseURL } from "./services/index.js";
 
 function App() {
   const [results, setResults] = useState([]);
@@ -16,9 +17,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const resp = await axios(
-      `https://api.themoviedb.org/3/search/movie?api_key=bce9e682949cac77cfcbf7c7654e8dd0&&language=en-US&page=1&include_adult=false&query=${movies}`
-    );
+    const resp = await axios(`${tmdbBaseURL}${movies}`);
     // console.log(resp.data.results);
     setResults(resp.data.results);
     history.push(`/search/${movies}`);
