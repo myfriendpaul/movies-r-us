@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #2a2f3d;
   padding: 1rem;
   /* position: sticky; */
@@ -24,23 +26,28 @@
 .logo-title-container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  font-size: 2rem;
+  justify-items: flex-start;
 }
 
 .logo-title {
   font-family: "Bungee", cursive;
   color: #ffca00;
   justify-content: center;
+  font-size: 3rem;
 }
 
 .text-temp {
-  /* padding: 0 25px 0 0; */
+  padding: 0 25px 0 0;
+  list-style-type: none;
 }
 .nav-links {
   text-decoration: none;
   margin: 10px;
+  color: #ffffff;
 }
-.text-temp {
-  list-style-type: none;
+
+.nav-links-container {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1.5rem;
 }

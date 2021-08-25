@@ -9,7 +9,7 @@ function Nav() {
       <header className="nav-container">
         <div className="logo-container">
           <div className="logo-title-container">
-            <Link to="/">
+            <Link to="/" className="nav-links">
               <p className="logo-title">SEENT IT</p>
             </Link>
           </div>
