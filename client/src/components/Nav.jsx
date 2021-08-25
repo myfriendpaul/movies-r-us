@@ -9,7 +9,9 @@ function Nav() {
       <header className="nav-container">
         <div className="logo-container">
           <div className="logo-title-container">
-            <p className="logo-title">SEENT IT</p>
+            <Link to="/">
+              <p className="logo-title">SEENT IT</p>
+            </Link>
           </div>
         </div>
         <ul className="text-temp">
