@@ -15,6 +15,8 @@ function WatchListCards(props) {
           />
         ) : (
           <img
+            className="movie-posters"
+            alt="poster"
             src={`https://image.tmdb.org/t/p/w200${props.item.fields.poster_path}`}
           />
         )}

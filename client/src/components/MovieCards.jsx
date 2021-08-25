@@ -3,7 +3,7 @@ import { airtableBaseURL, config } from "../services";
 
 function MovieCards(props) {
   const title = props.movie.title;
-  const poster = `https://image.tmdb.org/t/p/w200${props.movie.poster_path}`;
+  const poster_path = props.movie.poster_path;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -11,7 +11,7 @@ function MovieCards(props) {
     try {
       const addMovie = {
         title,
-        poster,
+        poster_path,
       };
       await axios.post(airtableBaseURL, { fields: addMovie }, config);
     } catch (error) {
@@ -27,7 +27,7 @@ function MovieCards(props) {
         {props.movie.poster_path ? (
           <img
             alt="poster"
-            src={`https://image.tmdb.org/t/p/w200${props.movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w200${poster_path}`}
           />
         ) : (
           <div className="temp-poster"></div>
