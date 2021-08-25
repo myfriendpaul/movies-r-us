@@ -5,6 +5,7 @@ import SearchForm from "./components/SearchForm";
 import Nav from "./components/Nav";
 import "./App.css";
 import MovieCards from "./components/MovieCards";
+import Footer from "./components/Footer";
 
 function App() {
   const [results, setResults] = useState([]);
@@ -49,6 +50,7 @@ function App() {
           );
         })}
       </Route>
+      <Footer />
     </div>
   );
 }
