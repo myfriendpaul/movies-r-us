@@ -6,6 +6,13 @@ body {
   background-color: #2a2f3d;
 }
 
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .movie-posters {
   width: 200px;
   height: 450px;

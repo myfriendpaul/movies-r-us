@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
     margin: "1em",
   },
   input: {
-    width: "20vw",
+    width: "25vw",
   },
   textFieldLabel: {
     // this will be applied when input focused (label color change)

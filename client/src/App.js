@@ -39,7 +39,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div className="flex-wrapper">
         <nav>
           <Nav />
         </nav>
