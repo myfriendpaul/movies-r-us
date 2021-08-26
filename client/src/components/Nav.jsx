@@ -1,6 +1,6 @@
 import { Link, Route } from "react-router-dom";
 import CreateaMovie from "./CreateaMovie";
-import "./NavCSS.css";
+import "./Nav.css";
 import WatchList from "./WatchList";
 
 function Nav() {

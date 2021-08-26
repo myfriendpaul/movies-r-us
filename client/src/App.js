@@ -7,6 +7,20 @@ import "./App.css";
 import MovieCards from "./components/MovieCards";
 import Footer from "./components/Footer";
 import { tmdbBaseURL } from "./services/index.js";
+import { ThemeProvider } from "@material-ui/core";
+import { createTheme } from "@material-ui/core/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#264653",
+      secondary: "#2A2F3D",
+    },
+    text: {
+      main: "#FFFFFF",
+    },
+  },
+});
 
 function App() {
   const [results, setResults] = useState([]);
@@ -24,33 +38,35 @@ function App() {
   };
 
   return (
-    <div>
-      <nav>
-        <Nav />
-      </nav>
+    <ThemeProvider theme={theme}>
+      <div>
+        <nav>
+          <Nav />
+        </nav>
 
-      <Route path="/" exact>
-        <SearchForm
-          movies={movies}
-          setMovies={setMovies}
-          results={results}
-          handleSubmit={handleSubmit}
-        />
-      </Route>
+        <Route path="/" exact>
+          <SearchForm
+            movies={movies}
+            setMovies={setMovies}
+            results={results}
+            handleSubmit={handleSubmit}
+          />
+        </Route>
 
-      <Route path="/search/:search" exact>
-        {results.map((movie, index) => {
-          return (
-            <MovieCards
-              movie={movie}
-              key={index}
-              setToggleFetch={setToggleFetch}
-            />
-          );
-        })}
-      </Route>
-      <Footer />
-    </div>
+        <Route path="/search/:search" exact>
+          {results.map((movie, index) => {
+            return (
+              <MovieCards
+                movie={movie}
+                key={index}
+                setToggleFetch={setToggleFetch}
+              />
+            );
+          })}
+        </Route>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
