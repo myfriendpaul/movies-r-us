@@ -1,13 +1,14 @@
-.searchform-container {
+.createamovie-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 14vh;
-  /* align-items: center; */
-  /* align-content: center; */
+  align-items: center;
+  align-content: center;
+  margin-top: 30vh;
 }
-/* 
-.search-container {
+
+.create-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -17,4 +18,4 @@
   display: flex;
   align-self: center;
   justify-content: center;
-} */
+}
