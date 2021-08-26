@@ -30,15 +30,14 @@ function MovieCards(props) {
             src={`https://image.tmdb.org/t/p/w300${poster_path}`}
           />
         ) : (
-          <div className="temp-poster"></div>
+          <img
+            class="card-image"
+            alt="poster not found"
+            src={"https://imgur.com/iw3XbpF.png"}
+          />
         )}
         <form className="form-container" onSubmit={handleSubmit}>
-          <Button
-            variant="contained"
-            color="primary"
-            // className={classes.root}
-            type="submit"
-          >
+          <Button variant="contained" color="primary" type="submit">
             Add to Watchlist
           </Button>
         </form>

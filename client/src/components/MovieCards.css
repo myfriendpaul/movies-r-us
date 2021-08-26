@@ -5,15 +5,16 @@
   scroll-behavior: smooth;
   height: 40vh;
 }
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
-
 .cards {
   display: flex;
   justify-content: center;
 }
+
 .card {
   padding: 0 2px;
   transition: 250ms all;

@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 function SearchForm(props) {
-  const { results, movies, setMovies, handleSubmit } = props;
+  const { movies, setMovies, handleSubmit } = props;
   const classes = useStyles();
   return (
     <div className="searchform-container">

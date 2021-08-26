@@ -8,7 +8,7 @@ function WatchListCards(props) {
       <div className="card2">
         {props.item.fields.poster_path.includes("https") ? (
           <img
-            className="movie-posters2"
+            className="card-image2"
             alt="poster"
             src={props.item.fields.poster_path}
           />
@@ -19,14 +19,16 @@ function WatchListCards(props) {
             src={`https://image.tmdb.org/t/p/w200${props.item.fields.poster_path}`}
           />
         )}
+        <form className="form-container2">
+          <div className="toggle">
+            <ToggleSwitch movie={props.item} />
+            <p>Currently Watching</p>
+          </div>
+          <div className="delete">
+            <Delete movie={props.item} setToggleFetch={props.setToggleFetch} />
+          </div>
+        </form>
       </div>
-      {/* <div className="title-container2">
-        <h2 className="title2">{props.item.fields.title}</h2> */}
-      {/* </div> */}
-      <form className="form-container">
-        <ToggleSwitch movie={props.item} />
-        <Delete movie={props.item} setToggleFetch={props.setToggleFetch} />
-      </form>
     </div>
   );
 }

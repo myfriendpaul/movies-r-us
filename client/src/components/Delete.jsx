@@ -30,7 +30,7 @@ function Delete(props) {
     props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
   };
   return (
-    <div>
+    <>
       <Button
         variant="contained"
         color="primary"
@@ -40,10 +40,7 @@ function Delete(props) {
       >
         Delete
       </Button>
-      {/* <button className="button" type="submit" onClick={handleDelete}>
-        Remove
-      </button> */}
-    </div>
+    </>
   );
 }
 

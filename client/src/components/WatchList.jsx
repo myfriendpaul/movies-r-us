@@ -16,7 +16,7 @@ function WatchList() {
   }, [toggleFetch]);
 
   return (
-    <div className="poster-scroll">
+    <div className="poster-scroll2">
       {listItem.map((item, index) => (
         <React.Fragment key={index}>
           <WatchListCards item={item} setToggleFetch={setToggleFetch} />
