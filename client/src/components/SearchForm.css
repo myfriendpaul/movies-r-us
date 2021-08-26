@@ -1,20 +1,5 @@
 .searchform-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 14vh;
-  /* align-items: center; */
-  /* align-content: center; */
+  margin-top: 11vh;
 }
-/* 
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.form-container {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-} */

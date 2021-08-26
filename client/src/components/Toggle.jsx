@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import "./Toggle.css";
 
 function ToggleSwitch() {
-  const [checked, setChecked] = useState(false);
-  const onToggle = () => setChecked(!checked);
+  const [isToggled, setIsToggled] = useState(false);
+  const onToggle = () => setIsToggled(!isToggled);
 
   return (
     <label className="toggle-switch">
-      <input
-        label="Currently Watching"
-        type="checkbox"
-        checked={checked}
-        onChange={onToggle}
-      />
-      <p></p>
+      <input type="checkbox" checked={isToggled} onChange={onToggle} />
       <span className="switch" />
     </label>
   );

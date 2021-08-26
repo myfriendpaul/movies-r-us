@@ -3,7 +3,6 @@
   overflow-x: scroll;
   padding: 20px 0;
   scroll-behavior: smooth;
-  margin: auto;
 }
 ::-webkit-scrollbar {
   width: 0px;

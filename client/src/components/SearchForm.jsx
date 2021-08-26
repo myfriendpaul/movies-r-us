@@ -1,9 +1,8 @@
 import React from "react";
 import "./SearchForm.css";
 import { Button, TextField } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createTheme } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
-import { createTheme } from "@material-ui/core/styles";
 
 const theme = createTheme({
   palette: {
