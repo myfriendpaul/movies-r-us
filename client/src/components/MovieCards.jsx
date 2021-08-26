@@ -1,5 +1,7 @@
 import axios from "axios";
 import { airtableBaseURL, config } from "../services";
+import "./MovieCards.css";
+import { Button } from "@material-ui/core";
 
 function MovieCards(props) {
   const title = props.movie.title;
@@ -19,28 +21,33 @@ function MovieCards(props) {
     }
   };
   return (
-    <div className="card-container">
-      <div className="poster-container">
-        <div className="title-container">
-          <h2 className="title">{title}</h2>
-        </div>
+    <div className="cards">
+      <div className="card">
         {props.movie.poster_path ? (
           <img
+            class="card-image"
             alt="poster"
-            src={`https://image.tmdb.org/t/p/w200${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w300${poster_path}`}
           />
         ) : (
           <div className="temp-poster"></div>
         )}
-      </div>
-      <div className="add-button">
-        <form onSubmit={handleSubmit}>
-          <button type="submit" className="button">
-            Add to Watch List
-          </button>
+        <form className="form-container" onSubmit={handleSubmit}>
+          <Button
+            variant="contained"
+            color="primary"
+            // className={classes.root}
+            type="submit"
+          >
+            Add to Watchlist
+          </Button>
         </form>
       </div>
     </div>
   );
 }
 export default MovieCards;
+
+{
+  /* <h2 className="title">{title}</h2> */
+}

@@ -52,18 +52,19 @@ function App() {
             handleSubmit={handleSubmit}
           />
         </Route>
-
-        <Route path="/search/:search" exact>
-          {results.map((movie, index) => {
-            return (
-              <MovieCards
-                movie={movie}
-                key={index}
-                setToggleFetch={setToggleFetch}
-              />
-            );
-          })}
-        </Route>
+        <div className="poster-scroll">
+          <Route path="/search/:search" exact>
+            {results.map((movie, index) => {
+              return (
+                <MovieCards
+                  movie={movie}
+                  key={index}
+                  setToggleFetch={setToggleFetch}
+                />
+              );
+            })}
+          </Route>
+        </div>
         <Footer />
       </div>
     </ThemeProvider>

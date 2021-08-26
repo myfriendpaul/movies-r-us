@@ -108,7 +108,6 @@ function CreateaMovie() {
               >
                 Send to Hollywood
               </Button>
-              {/* <button type="submit">Send to Hollywood</button> */}
             </Link>
             <Route path={`/watchlist`}></Route>
           </form>

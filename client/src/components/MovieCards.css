@@ -1,0 +1,31 @@
+.poster-scroll {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.card {
+  padding: 0 2px;
+  transition: 250ms all;
+  justify-content: center;
+}
+
+.card:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+/* 
+.form-container {
+  align-items: center;
+} */
+
+.card-image {
+  width: 300px;
+  height: 400px;
+}
