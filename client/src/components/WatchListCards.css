@@ -3,7 +3,7 @@
 .poster-scroll2 {
   display: flex;
   overflow-x: scroll;
-  padding: 150px 0;
+  /* padding: 150px 0; */
   scroll-behavior: smooth;
   height: 40vh;
   margin-top: 9vh;
