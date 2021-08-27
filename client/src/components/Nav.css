@@ -68,7 +68,37 @@
   .nav-links-container {
     display: inline;
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .text-temp {
+    display: inline;
+    padding: 0;
+  }
+  .logo-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo-title {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .nav-links {
+    display: inline;
+    text-align: center;
+  }
+  .nav-container {
+    /* display: inline; */
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nav-links-container {
+    display: inline;
+    font-weight: 500;
+    font-size: 1rem;
     text-align: center;
   }
   .text-temp {
