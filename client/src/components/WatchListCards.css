@@ -6,6 +6,7 @@
   padding: 150px 0;
   scroll-behavior: smooth;
   height: 40vh;
+  margin-top: 9vh;
 }
 
 ::-webkit-scrollbar {
@@ -56,6 +57,16 @@
 @media only screen and (max-width: 375px) {
   .poster-scroll2 {
     display: inline;
+    overflow-y: scroll;
+    text-align: center;
+    scroll-behavior: smooth;
+    height: 75%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .poster-scroll2 {
+    display: flex;
     overflow-y: scroll;
     text-align: center;
     scroll-behavior: smooth;
