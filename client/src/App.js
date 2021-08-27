@@ -52,8 +52,8 @@ function App() {
             handleSubmit={handleSubmit}
           />
         </Route>
-        <div className="poster-scroll">
-          <Route path="/search/:search" exact>
+        <Route path="/search/:search" exact>
+          <div className="poster-scroll">
             {results.map((movie, index) => {
               return (
                 <MovieCards
@@ -63,8 +63,8 @@ function App() {
                 />
               );
             })}
-          </Route>
-        </div>
+          </div>
+        </Route>
         <Footer />
       </div>
     </ThemeProvider>

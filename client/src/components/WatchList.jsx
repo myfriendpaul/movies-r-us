@@ -17,11 +17,16 @@ function WatchList() {
 
   return (
     <div className="poster-scroll2">
-      {listItem.map((item, index) => (
-        <React.Fragment key={index}>
-          <WatchListCards item={item} setToggleFetch={setToggleFetch} />
-        </React.Fragment>
-      ))}
+      {listItem.map((item, index) => {
+        if (!item.fields.checked) {
+          item.fields.checked = false;
+        }
+        return (
+          <React.Fragment key={index}>
+            <WatchListCards item={item} setToggleFetch={setToggleFetch} />
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 }

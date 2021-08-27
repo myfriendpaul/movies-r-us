@@ -21,7 +21,10 @@ function WatchListCards(props) {
         )}
         <form className="form-container2">
           <div className="toggle">
-            <ToggleSwitch movie={props.item} />
+            <ToggleSwitch
+              movie={props.item}
+              setToggleFetch={props.setToggleFetch}
+            />
             <p>Currently Watching</p>
           </div>
           <div className="delete">

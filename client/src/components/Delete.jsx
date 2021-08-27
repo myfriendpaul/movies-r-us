@@ -1,6 +1,6 @@
 import { airtableBaseURL, config } from "../services";
 import axios from "axios";
-import { Button } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import { createTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -35,10 +35,9 @@ function Delete(props) {
         variant="contained"
         color="primary"
         className={classes.root}
-        type="submit"
         onClick={handleDelete}
       >
-        Delete
+        Remove from Watchlist
       </Button>
     </>
   );

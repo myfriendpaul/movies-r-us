@@ -1,15 +1,43 @@
+import { useState } from "react";
 import axios from "axios";
 import { airtableBaseURL, config } from "../services";
 import "./MovieCards.css";
 import { Button } from "@material-ui/core";
+import Snackbar from "@material-ui/core/Snackbar";
 
 function MovieCards(props) {
   const title = props.movie.title;
   const poster_path = props.movie.poster_path;
+  const [alert, setAlert] = useState({
+    open: false,
+    vertical: "top",
+    horizontal: "center",
+  });
+
+  const { vertical, horizontal, open } = alert;
+
+  const handleClick = (newAlert) => () => {
+    setAlert({ open: true, ...newAlert });
+  };
+
+  const handleClose = () => {
+    setAlert({ ...alert, open: false });
+  };
+
+  const buttons = (
+    <>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleClick({ vertical: "top", horizontal: "center" })}
+      >
+        Add to Watchlist
+      </Button>
+    </>
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    alert("Movie was added!");
     try {
       const addMovie = {
         title,
@@ -37,16 +65,17 @@ function MovieCards(props) {
           />
         )}
         <form className="form-container" onSubmit={handleSubmit}>
-          <Button variant="contained" color="primary" type="submit">
-            Add to Watchlist
-          </Button>
+          {buttons}
         </form>
       </div>
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        onClose={handleClose}
+        message="Movie added to watch list!"
+        key={vertical + horizontal}
+      />
     </div>
   );
 }
 export default MovieCards;
-
-{
-  /* <h2 className="title">{title}</h2> */
-}

@@ -20,7 +20,7 @@ function Nav() {
               Home
             </Link>
             <Link to="/watchlist" className="nav-links">
-              Watch List
+              Watchlist
             </Link>
             <Link to="/createamovie" className="nav-links">
               Create-A-Movie
