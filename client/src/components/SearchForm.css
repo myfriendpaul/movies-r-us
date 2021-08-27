@@ -1,6 +1,7 @@
 .searchform-container {
   display: flex;
   justify-content: center;
+  /* width: 100vw; */
   /* margin-top: 31vh; */
   /* align-items: center; */
   /* align-content: center; */
@@ -17,4 +18,5 @@
   display: flex;
   align-self: center;
   justify-content: center;
+  /* width: 100vw; */
 }

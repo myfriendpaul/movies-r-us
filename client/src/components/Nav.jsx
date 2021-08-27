@@ -23,7 +23,7 @@ function Nav() {
               Watchlist
             </Link>
             <Link to="/createamovie" className="nav-links">
-              Create-A-Movie
+              Create
             </Link>
           </li>
         </ul>

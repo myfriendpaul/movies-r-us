@@ -26,14 +26,16 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     margin: "1.5em",
     textDecoration: "none",
+    textAlign: "center",
   },
   input: {
-    width: "25vw",
+    width: "50vw",
     padding: "1em",
   },
   textFieldLabel: {
     // this will be applied when input focused (label color change)
     color: theme.palette.primary.main,
+    width: "50vw",
     padding: "1em",
   },
   textFieldRoot: {
@@ -61,7 +63,7 @@ function CreateaMovie() {
     <div className="createamovie-container">
       <div className="create-container">
         <Container>
-          <form className="form-container" onSubmit={handleSubmit}>
+          <form className="form-container3" onSubmit={handleSubmit}>
             <TextField
               className={classes.input}
               id="standard-basic"
@@ -80,7 +82,6 @@ function CreateaMovie() {
               type="text"
               onChange={(e) => setTitle(e.currentTarget.value)}
             />
-            <br />
             <TextField
               className={classes.input}
               id="standard-basic"
@@ -100,13 +101,12 @@ function CreateaMovie() {
               type="text"
               onChange={(e) => setPoster(e.currentTarget.value)}
             />
-            {/* {console.log(e.currentTarget.value)} */}
-            <br />
+
             <Button
               variant="contained"
               color="primary"
               type="submit"
-              // className={classes.root}
+              className={classes.root}
             >
               Send to Hollywood
             </Button>
@@ -120,50 +120,24 @@ function CreateaMovie() {
 
 export default CreateaMovie;
 
-// import { useState } from "react";
-// import { Route, useHistory } from "react-router-dom";
-// import { airtableBaseURL, config } from "../services";
-// import axios from "axios";
-
-// function CreateaMovie() {
-//   const [title, setTitle] = useState("");
-//   const [poster, setPoster] = useState("");
-//   let history = useHistory();
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-//     const addMovie = {
-//       title,
-//       poster_path: poster,
-//     };
-//     await axios.post(airtableBaseURL, { fields: addMovie }, config);
-//     history.push("/watchlist");
-//   };
-
-//   return (
-//     <div className="create-container">
-//       <form id="createamovie" onSubmit={handleSubmit}>
-//         <input
-//           id="createamovie-input"
-//           placeholder="Create Your Movie"
-//           value={title}
-//           type="text"
-//           onChange={(e) => setTitle(e.target.value)}
-//         />
-//         <br />
-//         <input
-//           id="createamovie-img"
-//           placeholder="Add your poster URL"
-//           value={poster}
-//           type="text"
-//           onChange={(e) => setPoster(e.target.value)}
-//         />
-//         <br />
-//         <button type="submit">Send to Hollywood</button>
-//         <Route path={`/watchlist`}></Route>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default CreateaMovie;
+{
+  /* <form className="form-container" onSubmit={handleSubmit}>
+<TextField
+  className={classes.input}
+  id="standard-basic"
+  label="Create Your Movie"
+  InputLabelProps={{
+    classes: {
+      root: classes.textFieldLabel,
+    },
+  }}
+  InputProps={{
+    classes: {
+      root: classes.textFieldRoot,
+    },
+  }}
+  value={title}
+  type="text"
+  onChange={(e) => setTitle(e.currentTarget.value)}
+/> */
+}

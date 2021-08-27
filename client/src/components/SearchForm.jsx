@@ -23,12 +23,12 @@ const useStyles = makeStyles(() => ({
     margin: "1em",
   },
   input: {
-    width: "25vw",
     marginRight: "1em",
   },
   textFieldLabel: {
     // this will be applied when input focused (label color change)
     color: theme.palette.primary.main,
+    width: "40vw",
   },
   textFieldRoot: {
     // this will be applied when hovered (input text color change)
@@ -62,6 +62,7 @@ function SearchForm(props) {
               type="text"
               onChange={(e) => setMovies(e.target.value)}
             />
+            <br />
             <Button
               variant="contained"
               color="primary"
