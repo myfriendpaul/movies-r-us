@@ -74,7 +74,7 @@ Movies R Us is an app that allows users to search a database of movies and allow
 This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
 | Day       | Deliverable                                        | Status                |
-| --------- | -------------------------------------------------- | --------------------- | ---------- |
+| ---------------------- | --------------------- | ---------- |
 | Aug 19-20 | Readme / Wireframes / Priority Matrix / Timeframes | Complete              |
 | Aug 20    | Project Approval                                   | Complete              |
 | Aug 21-22 | Functionality for search                           | Complete              |
