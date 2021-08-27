@@ -18,7 +18,6 @@ Movies R Us is an app that allows users to search a database of movies and allow
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This **must** be properly formatted. An example is below:
 
 ```json
 {
@@ -56,16 +55,18 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 #### MVP
 
-- Find and use external api
-- Add external api data to airtable api
-- Search through database
-- Create a movie if it doesn't exist
+- Populate movie search results as movie posters after running the search form utilizing a GET request to the TMDB API
+- Populate watchlist history using a GET request to the Airtable API
+- Selected movie is able to be added to watchlist which passes through the TMDB API into the Airtable API utilizing a POST request
+- User is able to add their own movie with a Title and Poster via URL which is sent to the Airtable API via a POST request
+- Movies that populate the watchlist will have the option to remove from Airtable via a DELETE request and update on the page
 - Allow user to add and remove selected movie to watch list
 
 #### PostMVP
 
+- Create a toggle that allows the user to keep track of what they are currently watching
 - Use third api to send selected movies to my in home server and add to "To be added" list
-- Add TV Shows
+- Add TV Shows search results 
 - Allow user to create multiple lists
 
 ## Project Schedule
@@ -74,33 +75,46 @@ This schedule will be used to keep track of your progress throughout the week an
 
 | Day       | Deliverable                                        | Status                |
 | --------- | -------------------------------------------------- | --------------------- | ---------- |
-| Aug 19-20 | Readme / Wireframes / Priority Matrix / Timeframes | Incomplete            |
-| Aug 20    | Project Approval                                   | Incomplete            |
-| Aug 21-22 | Functionality for search                           | Incomplete            |
-| Aug 23    | Components completed                               | InitialClickableModel | Incomplete |
-| Aug 24    | CSS                                                | Incomplete            |
-| Aug 25    | MVP                                                | Incomplete            |
-| Aug 27    | Presentations                                      | Incomplete            |
+| Aug 19-20 | Readme / Wireframes / Priority Matrix / Timeframes | Complete              |
+| Aug 20    | Project Approval                                   | Complete              |
+| Aug 21-22 | Functionality for search                           | Complete              |
+| Aug 23    | Components completed                               | Complete              |  
+| Aug 24    | CSS                                                | Complete              |
+| Aug 25    | MVP and Material Ui components                     | Complete              |
+| Aug 27    | Presentations                                      | Complete              |
 
 ## Timeframes
 
 | Component        | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Search Results   |    H     |      8hrs      |      hrs      |     hrs     |
-| Watch List       |    H     |      8hrs      |      hrs      |     hrs     |
-| Pass state to WL |    H     |      6hrs      |      hrs      |     hrs     |
-| Create-A-Movie   |    H     |      6hrs      |      hrs      |     hrs     |
-| Header/Footer    |    M     |      4hrs      |      hrs      |     hrs     |
-| CSS/Bootstrap    |    H     |     12hrs      |      hrs      |     hrs     |
+| Search Results   |    H     |      4hrs      |      4hrs      |     4hrs     |
+| Mapping search   |    H     |      4hrs      |      4hrs      |     4hrs     |
+| Airtable Results |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Mapping Airtable |    H     |      2hrs      |      2hrs      |     2hrs     |
+| Watch List Cards |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Add to Watchlist |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Watch List       |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Pass state to WL |    H     |      6hrs      |      8hrs      |     8hrs     |
+| Create-A-Movie   |    H     |      6hrs      |      6hrs      |     6hrs     |
+| Delete from WL   |    H     |      3hrs      |      4hrs      |     4hrs     |
+| Header/Footer    |    M     |      4hrs      |      4hrs      |     4hrs     |
+| CSS              |    H     |      6hrs      |      6hrs      |     6hrs     |
+| Material Ui      |    M     |      8hrs      |      8hrs      |     8hrs     |
+| Toggle Switch    |    L     |      3hrs      |      4hrs      |     4hrs     |
 
-| Total | H | 44hrs | hrs | hrs |
+| Total | H | 58hrs | 62hrs | 62hrs |
 
 ## SWOT Analysis
 
 ### Strengths:
+Confident in how my component hierachy will keep me on track and on schedule. I feel as it is detailed enough to make sure I tick all my boxes with little to no setbacks.
 
 ### Weaknesses:
+I have yet to use grid with flexbox together which I know I will need in order to get the layout and design I am looking for. Thankfully, I have found resources that will aid in my CSS process next week.
 
-### Opportunities:
+### Opportunities: 
+Passing the search results into watch list will be a challenge. The thought process so far is to consider it inside its own container and using event listeners to get the data passed into a separate component.
+
 
 ### Threats:
+Getting the two APIs to talk to each other will be the biggest challenge I can see thus far. Utilizing a lifted state, I should be able to pass them into components via props. 
