@@ -36,7 +36,7 @@
 
 @media only screen and (max-width: 500px) {
   .poster-scroll {
-    display: inline;
+    display: flex;
     overflow-y: scroll;
     scroll-behavior: smooth;
     height: 75%;
