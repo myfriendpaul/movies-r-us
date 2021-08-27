@@ -29,13 +29,13 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
   },
   input: {
-    width: "50vw",
+    width: "35vw",
     padding: "1em",
   },
   textFieldLabel: {
     // this will be applied when input focused (label color change)
     color: theme.palette.primary.main,
-    width: "50vw",
+    width: "35vw",
     padding: "1em",
   },
   textFieldRoot: {
